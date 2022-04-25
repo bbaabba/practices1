@@ -1,0 +1,22 @@
+package Chap04;
+
+public class Ex10_CreateStringObject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//#1.String 객체 생성1
+		String str1 = new String("안녕");
+		System.out.println(str1);
+		
+		//#2.String 객체 생성2
+		String str2 = "안녕하세요";
+		System.out.println(str2);
+		
+		String str3;
+		str3 = new String("ㅎㅇ");
+		System.out.println(str3);
+
+	}
+
+}
