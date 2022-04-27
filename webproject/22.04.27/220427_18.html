@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script>
+            function digit8(v){ //숫자 v를 8비트 2진수로 전환하는 방법 중 하나
+                let str="";//str 공백을 만들고, 
+                for(let i = 0; i<8;i++,v<<=1){ //i이 추가되며 v의 값이 오른쪽으로 1회 전진  
+                    if((v&0x80)) str+="1"; //v값이 1과 비교해서 true를 반환하면 1, 0이 반환된다
+                    else str += "0"
+                } 
+                return str; //8회 진행된 str값을 리턴함
+            }
+        </script>
+    </head>
+    <body>
+        <h3>비트 논리 연산과 시프트 연산</h3>
+        <hr>
+        <script>
+            let x= 10, y=3;
+            document.write("<pre>");
+            document.write("x="+x+",y="+y+"<br>");
+            document.write("x:       "+digit8(x)+"<br>");
+            document.write("y:       "+digit8(y)+"<br>");
+            document.write("<hr>");
+            document.write("x&y :    "+digit8(x&y)+"<br>");
+            document.write("x|y :    "+digit8(x|y)+"<br>");
+            document.write("x^y :    "+digit8(x^y)+"<br>");
+            document.write("~x :     "+digit8(~x)+"<br>");
+            document.write("<hr>");
+            document.write("x<<1 :   "+digit8(x<<1)+"<br>");
+            document.write("x>>1 :   "+digit8(x>>1)+"<br>");
+            document.write("x>>>1 :  "+digit8(x>>>1)+"<br>");
+            document.write("</pre>");
+        </script>
+    </body>
+</html>

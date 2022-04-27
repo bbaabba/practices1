@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>if-else</title>
+    </head>
+    <body>
+        <h3>if-else를 이용한 학점 매기기</h3>
+        <hr>
+        <script>
+            let grade;
+            let score = prompt("황기태 님 점수를 입력하세요", 100); //입력프롬프트 출력, 기본값 100
+            score = parseInt(score); //문자열인 score를 int형태로 강제형변환
+            if(score >=90) //한문장만 쓰니까 그렇지 원래는 { } 입력해야함
+                grade = "A";
+            else if(score>=80)
+                grade = "B";
+            else if(score>=70)
+                grade = "C";
+            else if(score>=60)
+                grade = "D";
+            else
+                grade = "F";
+            document.write(score+"는"+grade+"입니다");
+            
+        </script>
+    </body>
+</html>

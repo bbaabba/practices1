@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>변수선언</title>
+    </head>
+    <body>
+        <h3>변수 선언, 전역/지역/블록 변수</h3>
+        <hr>
+        <script>
+            let x; //전역변수 x선언
+            function f() {
+                let y; //함수 f() 내에서만 사용되는 y선언
+                x = 10; //전역변수 x에 10 저장
+                y = 20; //지역변수 y에 20 저장
+                z = 30; //지역변수 z에 30 저장
+                if (y==20){
+                    let b = 40; //if구문 내에서 사용하는 블록 변수 b에 40저장
+                    b++;
+                    document.write("if 블록 내 블록변수 b = " +b+"<br>");
+                }
+                //if 블록 밖에서는 b 사용 불가능
+                document.write("함수 f()내 지역변수 y="+y+"<br>");
+            }
+
+            f();  //함수 f()호출
+            document.write("전역변수 x = "+x+"<br>");
+            document.write("전역변수 z="+z);
+        </script>
+    </body>
+</html>
