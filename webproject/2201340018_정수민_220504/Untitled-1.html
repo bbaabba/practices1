@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>웹페이지 기획서</title>
+        <style>@import url("a1.css"); </style>
+        <script>
+            function movetitle() {
+                let p = document.getElementById("section1");
+                p.innerHTML='<iframe src="title.html" width="1500" height="800" frameborder="0"></iframe>';
+            }
+
+            function movehtml2() {
+                let p = document.getElementById("section1");
+                p.innerHTML='<iframe src="Untitled-2.html" width="1500" height="800" frameborder="0"></iframe>';
+            }
+            
+            function movehtml3() {
+                let p = document.getElementById("section1");
+                p.innerHTML='<iframe src="Untitled-3.html" width="1300" height="550" frameborder="0"></iframe>';
+                
+            }
+
+            function movehtml4() {
+                let p = document.getElementById("section1");
+                p.innerHTML='<iframe src="Untitled-4.html" width="1600" height="800" frameborder="0"></iframe>';
+                
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h3>게임 정보 사이트 구상</h3>
+        <hr>
+            <nav id = "menubar">
+                <ul>
+                    <li><button type="button" value='innerHTML' onclick='movetitle()'>홈</button></li>
+                    <li><button type="button" value='innerHTML' onclick='movehtml2()'>홈페이지에 넣을 정보</button></li>
+                    <li><button type="button" value='innerHTML' onclick='movehtml3()'>사이트 메뉴 맵</button></li>
+                    <li><button type="button" value='innerHTML' onclick='movehtml4()'>레이아웃 정의</button></li>
+                </ul>
+            </nav>
+            <div id="section1"><iframe src="title.html" width="1200" height="1000" frameborder="0"></iframe></div>
+        <!-- 메인페이지  버튼 3개 만들기 -->
+        <!-- 링크1. 주제정하기 <<어떤걸 주제로 해야하나? 게임사이트 계속 밀어붙일까?, 홈페이지에 넣을 기본적인 정보-->
+        <!-- 링크2 .사이트 맵 메뉴 -->
+        <!-- 링크3. 레이아웃 정의 -->
+    </body>
+</html>

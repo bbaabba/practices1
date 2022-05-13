@@ -1,0 +1,27 @@
+<!-- 사이트의 기본 레이아웃 그림 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 문서 구조 시맨틱 태그 사용</title>
+        <style>
+            @import url(a4.css);
+        </style>
+    </head>
+    <body>
+        <h3>예상 웹페이지의 구성</h3>
+        <hr>
+        <header>메뉴 이동을 위한 header</header>
+        <nav>현재 메뉴의<br>소목차를 위한 <br>nav</nav>
+        <section id="section1">컨텐츠 표시를 위한 section</section>
+        <aside>
+            header영역 : 홈페이지의 각 메뉴를 표시 <br> 각 대목차들은 onmouseenter이벤트로 <br>마우스가 올라가면 소목차를 펼친다 <br>
+            대목차를 클릭하면 대목차 내의 첫번째 소목차로 페이지를 section구역에 띄운다. <br> width=100%, height = 15%예상 <br> 펼쳐진 소목차를 클릭하면 section은 클릭한 소목차로 이동한다.
+            <hr>
+            nav 영역 : 현재 페이지의 대목차 내의 소목차 메뉴들을 띄운다
+            <br> 소목차마다 링크를 걸어 클릭하면 <br>section 구역에 해당 소목차의 컨텐츠를 띄운다 <br>
+            left방향에 위치할것이며 width = 20%, height = 80%예상
+            <hr> section 영역 : 소목차의 html화면을 띄우는 영역. <br> 나머지 width 60%, height 65%의 영역예상
+        </aside>
+    </body>
+</html>

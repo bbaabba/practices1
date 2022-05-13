@@ -1,0 +1,24 @@
+#menubar {
+    background: green;
+}
+#menubar ul{ /* 여백과 패팅 모두 0*/
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+}
+#menubar ul li {
+    display: inline-block;  /*새 줄로 넘어가지 않게*/
+    list-style-type: none;   /*마커 삭제*/
+    padding: 0px 20px; /* top = bottom = 0, left = right = 15px*/
+}
+#menubar ul li button {
+    position: relative;
+    border:dashed;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+#menubar ul li button:hover{ /* 마우스 올라갈 때 색 */
+    color: violet;
+}

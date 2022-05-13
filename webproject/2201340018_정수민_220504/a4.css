@@ -1,0 +1,6 @@
+html, body{margin: 10px; padding: 10px; height: 100%;}
+header{width: 75%; height: 15%; background: rgb(255, 255, 154); text-align: center;margin:3px}
+nav{width: 15%; height: 70%; float: left; background: rgb(255, 219, 153); text-align: center;margin: 3px;}
+section{width: 60%; height: 70%; float: left; background: rgb(223, 255, 159); text-align: center;margin: 3px;}
+aside{width: 20%; height: 60%; float: right ; background: rgb(255, 252, 245)  ; }
+hr{border: 1px solid;}
