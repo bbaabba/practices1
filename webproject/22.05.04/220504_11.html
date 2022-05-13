@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>마우스 드래깅으로 캔버스에 그림 그리기</title>
+    </head>
+    <body onload="init()">
+        <h3>마우스를 누른 채 드래깅하여 그림 그려보기</h3>
+        <hr>
+        <canvas id="myCanvas" style="background-color: aliceblue;" width="400" height="300"></canvas>
+        <script>
+            let canvas, context;
+            function init(){
+                canvas = document.getElementById("myCanvas");
+                context = canvas.getContext("2d");
+
+                context.lineWidth = 2;
+                context.strokeStyle = "blue";
+
+                canvas.addEventListener("mousemove", function(e) {move(e)}, false);
+                canvas.addEventListener("mousedown", function(e) {down(e)}, false);
+                canvas.addEventListener("mouseup", function(e) {up(e)}, false);
+                canvas.addEventListener("mouseout", function(e) {out(e)}, false);
+            }
+            let startX = 0, startY = 0;
+            let dragging=false;
+            function draw(curX, curY){
+                context.beginPath();
+                context.moveTo(startX, startY); //startX, startY값을 시작좌표로 받음
+                context.lineTo(curX, curY); //curX, curY좌표값으로 선을 그음
+                context.stroke();
+            }
+            function down(e){
+                startX=e.offsetX;startY = e.offsetY;dragging=true; //드래그를 했을 경우 e.offsetX,Y값을 startX,Y값에 대입
+            }
+            function up(e){dragging = false;} //드래그가 멈춤
+            function move(e){
+                if(!dragging) return; //마우스가 눌러지지 않았다면 리턴, 눌러졌으면 진행
+                let curX = e.offsetX, curY = e.offsetY; //curX에 e.offsetX값, curY에 e.offsetY값 대입
+                draw(curX, curY);//curX,curY값으로 직선을 그림
+                
+//                startX = curX; startY = curY; //startX,startY값을 갱신, 이게 없으면 처음 클릭위치에서 갱신이 안됨
+            }
+            function out(e) {dragging = false;}
+        </script>
+    </body>
+</html>
