@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML문서 작성기 만들기</title>
+        <script>
+            let win = null;
+            function showHTML() {
+                if(win == null||win.closed) //내용이 null이나 closed면 새 윈도우 열기
+                win=window.open("","outWin","width = 300, height = 200");
+
+                let textArea = document.getElementById("srcText");
+                win.document.open();//기존에 있던 HTML문서는 사라지고
+                win.document.write(textArea.value); //textArea에 입력되어 있던 텍스트를 쓰고
+                win.document.close();//닫는다
+                //만약 출력버튼을 누르면 그 뒤로 계속 출력을 하고싶다면
+                //오픈 클로즈를 둘다 없애고 새로 버튼을 만들어야함
+                //또한 HTML태그를 인식하여 실행된다
+            }
+        </script>
+    </head>
+    <body>
+        <h3>HTML 문서 작성기 만들기</h3>
+        <hr>
+        <p>아래에 HTML문서를 작성하고 버튼을 클릭해보세요. 새 윈도우에 HTML문서가 출력됩니다.</p>
+        <textarea id="srcText" cols="50" rows="10"></textarea>
+        <br>
+        <br>
+        <button onclick="showHTML()">HTML문서 출력하기</button>
+    </body>
+</html>
