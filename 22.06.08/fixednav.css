@@ -63,12 +63,12 @@ nav ul li a {
     /* 이건 직접 조작해보면서 익숙해져 */
 }
 
-nav .sticky {
+nav.sticky {
     background-color: #fff;
     padding: 5px 100px;
 }
 
-nav .sticky .brand,
-nav .sticky ul li a {
+nav.sticky .brand,
+nav.sticky ul li a {
     color: #000;
 }
