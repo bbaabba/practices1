@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: skyblue;
+}
+
+.loading {
+    width: auto;
+    padding: 100px 0 10px 0;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin: 0 auto;
+}
+
+.dot1{
+    animation-name: dot1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dot1 {
+    0% {opacity:0;}
+    30% {opacity: 0;}
+    40% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+.dot2{
+    animation-name: dot2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dot2 {
+    0% {opacity:0;}
+    50% {opacity: 0;}
+    60% {opacity: 1;}
+    100% {opacity: 1;}
+}
+/* 이렇게 줄일 수 있음 */
+.dot3{
+    animation: dot3 2s infinite;
+}
+
+@keyframes dot3 {
+    0% {opacity:0;}
+    70% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+
+
+.bouncingball {
+    width: 4rem;
+    height: 12rem;
+    position: relative;
+    margin: auto;
+}
+
+.ball {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%{ top: 0; animation-timing-function: ease-in;}
+    34% { transform: scale(1,1);}
+    35%{ top: 12rem; transform: scale(1.3, 0.7); animation-timing-function: ease-out;}
+    38%{ transform: scale(1,1)}
+    39%{ top: 12rem; }
+    100%{ top: 0;}
+}

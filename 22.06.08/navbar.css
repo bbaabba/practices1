@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(0, 0,0,0.4);
+}
+
+.container {
+    width: 1280px;
+    margin-right: 0;
+}
+
+.nav_checkbox {
+    display:grid;
+    grid-template-columns:  1fr 1fr;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+    
+}
+
+.tab_nav {
+    outline: none;
+    display: none;
+}
+
+.label {
+    display: none;
+    color: #fff;
+    
+}
+/* 이건 걍 일단 넣은거 */
+.burger {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.content_nav {
+    grid-column: 3;
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+.content_nav li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.content_nav li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+/* ::after는 이 내용을 상위 함수밑에 더 붙인다는 뜻 */
+.content_nav li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.5s;
+}
+/* 마우스 올릴경우 스케일을 1,1로 */
+.content_nav li a:hover::after{
+    transform: scale(1,1);
+}
+
+.content_section{
+    height: 120vh;/*vh는 상대좌표라고 생각하면됨*/
+    background-image: url(https://images.unsplash.com/photo-1543385329-a2ebf86017df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1980&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+/*반응형 만들기*/
+@media screen and (max-width:1280px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .label {
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    .content_nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height:0;
+        overflow: hidden;
+        transform: all ease-in-out;
+
+    }
+    .nav_checkbox input:checked~ .content_nav {
+        max-height: 500px;
+    }
+
+    .content_nav li {
+        padding: 15px 0px;
+    }
+}
+
