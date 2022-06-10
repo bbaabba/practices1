@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-areas:'header header header' 'welcome welcome welcome' 'banner main aside' 'footer footer footer';
+            grid-template-columns: 250px auto 250px;
+            grid-template-rows: 100px auto auto 100px;
+        }
+        
+        .container div{
+            display: grid;
+            /* background-color: khaki; */
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+        }
+        .header{
+            background-color: khaki;
+            grid-area: header;
+        }
+        .welcome {
+            grid-area: welcome;
+            background-image: url(img/welcome-image.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .banner {
+            grid-area: banner;
+        }
+        .main {
+            display: grid;
+            grid-area: main;
+            /* grid-column: auto; */
+            grid-template-rows: 20% 80%;
+            /* justify-content: flex-start; */
+        }
+
+        .aside{
+            grid-area: aside;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: khaki;
+        }
+        @media (max-width:768px) {
+            .container {
+                display: grid;
+                width: 100%;
+                height: 100vh;
+                grid-template-areas: 'header' 'welcome' 'main' 'banner' 'aside' 'footer';
+                grid-template-columns: 100%;
+                grid-template-rows: 100px auto auto 7% 7% 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="welcome">welcome</div>
+        <div class="banner">banner</div>
+        <div class="main">
+            <h1>Country road</h1>
+            <p>Almost heaven, West Virginia 
+                Blue Ridge Mountains, Shenandoah River <br>
+                Life is old there, older than the trees 
+                Younger than the mountains, growin' like a breeze <br>
+                Country roads, sing, take me home
+                To the place I belong <br>
+                West Virginia, mountain mama
+                Take me home, country roads <br>
+                All my memories, they gather 'round her
+                Miner's lady, stranger to blue water <br>
+                Dark and dusty, painted on the sky
+                Misty taste of moonshine, teardrops in my eyes <br>
+                Country roads, take me home
+                To the place I belong <br>
+                West Virginia, mountain mama
+                Take me home, country roads <br>
+        </div>
+        <div class="aside">aside</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

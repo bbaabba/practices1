@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+        }
+
+        .items-inner {
+            border: 3px solid red;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            /* grid-gap: 8px; */
+        }
+        .view-more {
+            display: flex;
+            justify-content: flex-end;
+            color: red;
+            text-decoration: none;
+        }
+        .item {
+            display: grid;
+            grid-template-areas: 'img title' 'img price';
+            border-bottom: 1px solid lightgray;
+            justify-items: center;
+            margin: 5px;
+            /* text-align: left; */
+        }
+        .items-inner img {
+            grid-area: img;
+        }
+        .title {
+            width: 100%;
+            grid-area: title;
+        }
+        .price {
+            width: 100%;
+            /* border: 1px solid #000; */
+            grid-area: price;
+            color: lightskyblue;
+            align-self: start;
+        }
+        @media (max-width:1024px) {
+            .items-inner{
+                grid-template-columns: auto auto;
+            }
+        }
+        @media (max-width:768px) {
+            .items-inner{
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="best-seller">
+            <h4 class="bestheader">Best Seller</h4>
+            <div class="items-inner">
+                <div class="item"><img src="img/best-item-01.png" alt=""> <span class="title"> Best Home Appliances Product #01</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-02.png" alt=""> <span class="title"> Best Home Appliances Product #02</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-03.png" alt=""> <span class="title"> Best Home Appliances Product #03</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-04.png" alt=""> <span class="title"> Best Home Appliances Product #04</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-05.png" alt=""> <span class="title"> Best Home Appliances Product #05</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-06.png" alt=""> <span class="title"> Best Home Appliances Product #06</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-07.png" alt=""> <span class="title"> Best Home Appliances Product #07</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-08.png" alt=""> <span class="title"> Best Home Appliances Product #08</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-09.png" alt=""> <span class="title"> Best Home Appliances Product #09</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-10.png" alt=""> <span class="title"> Best Home Appliances Product #10</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-11.png" alt=""> <span class="title"> Best Home Appliances Product #11</span> <span class="price">$259</span></div>
+                <div class="item"><img src="img/best-item-12.png" alt=""> <span class="title"> Best Home Appliances Product #12</span> <span class="price">$259</span></div>
+            </div>
+            <a href="#" class="view-more">View More</a>
+        </section>
+    </div>
+</body>
+</html>

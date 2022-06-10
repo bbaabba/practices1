@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-areas: 'top' 'story' 'bottom';
+            /* grid-template-rows: auto auto auto; */
+        }
+
+        .top {
+            display: grid;
+            grid-area: top;
+            grid-gap: 3px;
+            grid-template-columns: repeat(5,auto);
+        }
+        img {
+            max-width: 100%;
+        }
+        .bottom {
+            display: grid;
+            grid-area: bottom;
+            grid-gap: 3px;
+            grid-template-columns: repeat(5,auto);
+        }
+        @media (max-width:1024px){
+            .project-gallery{
+                display: grid;
+                grid-template-areas: 'story' 'top' 'bottom';
+            }
+        }
+        @media (max-width:768px) {
+            .project-gallery{
+                display: grid;
+                grid-template-areas: 'story' 'top' 'bottom';
+            }
+            .items {
+                display: grid;
+                grid-template-columns: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-gallery">
+        <div class="items top">
+            <div><img src="img/project-image-01.jpg" alt=""></div>
+            <div><img src="img/project-image-02.jpg" alt=""></div>
+            <div><img src="img/project-image-03.jpg" alt=""></div>
+            <div><img src="img/project-image-04.jpg" alt=""></div>
+            <div><img src="img/project-image-05.jpg" alt=""></div>
+        </div>
+        <div class="story">
+            <h1>Title</h1>
+            <p>blua blua</p>
+        </div>
+        <div class="items bottom">
+            <div><img src="img/project-image-06.jpg" alt=""></div>
+            <div><img src="img/project-image-07.jpg" alt=""></div>
+            <div><img src="img/project-image-08.jpg" alt=""></div>
+            <div><img src="img/project-image-09.jpg" alt=""></div>
+            <div><img src="img/project-image-10.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
